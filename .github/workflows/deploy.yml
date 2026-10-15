@@ -37,6 +37,10 @@ jobs:
 
       - name: Configurar Pages
         uses: actions/configure-pages@v5
+        with:
+          # Liga o Pages automaticamente no modo "GitHub Actions"
+          # (corrige se estiver no modo antigo "Deploy from a branch")
+          enablement: true
 
       - name: Empacotar o site
         uses: actions/upload-pages-artifact@v3
